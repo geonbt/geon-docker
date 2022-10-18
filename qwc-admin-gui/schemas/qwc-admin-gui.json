@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/qwc-services/qwc-admin-gui/master/schemas/qwc-admin-gui.json",
+  "title": "QWC Admin GUI",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "title": "JSON Schema",
+      "description": "Reference to JSON schema of this config",
+      "type": "string",
+      "format": "uri",
+      "default": "https://raw.githubusercontent.com/qwc-services/qwc-admin-gui/master/schemas/qwc-admin-gui.json"
+    },
+    "service": {
+      "title": "Service name",
+      "type": "string",
+      "const": "admin-gui"
+    },
+    "config": {
+      "title": "Config options",
+      "type": "object",
+      "properties": {
+        "db_url": {
+          "description": "DB connection URL",
+          "type": "string"
+        },
+        "config_generator_service_url": {
+          "description": "Config generator URL",
+          "type": "string"
+        },
+        "totp_enabled": {
+          "description": "Show TOTP fields for two factor authentication",
+          "type": "boolean"
+        },
+        "user_info_fields": {
+          "description": "Additional user fields",
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "proxy_url_whitelist": {
+          "description": "List of RegExes for whitelisted URLs",
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "proxy_timeout": {
+          "description": "Timeout in seconds for proxy requests",
+          "type": "integer"
+        },
+        "admin_gui_title": {
+          "description": "Title displayed in Admin Gui home page",
+          "type": "string"
+        },
+        "admin_gui_subtitle": {
+          "description": "Subtitle displayed in Admin Gui home page",
+          "type": "string"
+        },
+        "plugins": {
+          "description": "List of plugins to load",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "input_config_path": {
+          "description": "The path to the input configs. Required for 'themes' and 'config_editor' plugin.",
+          "type": "string"
+        },
+        "qwc2_path": {
+          "description": "The path to QWC2 files. Required for 'themes' and 'alkis' plugins.",
+          "type": "string"
+        },
+        "qgs_resources_path": {
+          "description": "The path to the QGIS projects. Required for 'themes' plugin.",
+          "type": "string"
+        },
+        "ogc_service_url": {
+          "description": "The OGC service URL. Required for 'themes' plugin.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "db_url",
+        "config_generator_service_url",
+        "totp_enabled"
+      ]
+    }
+  },
+  "required": [
+    "service",
+    "config"
+  ]
+}

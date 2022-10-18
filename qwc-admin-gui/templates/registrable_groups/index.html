@@ -1,0 +1,23 @@
+{% extends "templates/base_index.html" %}
+
+{% block title %}Registrable Groups{% endblock %}
+
+{% block new_resource_label %}New Registrable Group{% endblock %}
+
+{% block table_headers %}
+  <th>{{ sortable_column("ID", 'id') }}</th>
+  <th>{{ sortable_column("Title", 'title') }}</th>
+  <th>{{ sortable_column("Description", 'description') }}</th>
+  <th>{{ sortable_column("Group", 'group') }}</th>
+{% endblock %}
+
+{% block resource_fields %}
+  <td>{{ resource.id }}</td>
+  <td>{{ resource.title }}</td>
+  <td {% if resource.description | length > 50 %}title="{{ resource.description }}"{% endif %}>
+    {{ resource.description | truncate(50, true, '...') }}
+  </td>
+  <td>{{ resource.group.name }}</td>
+{% endblock %}
+
+{% block delete_resource_confirmation %}Remove registrable group?{% endblock %}

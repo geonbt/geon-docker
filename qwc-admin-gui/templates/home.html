@@ -1,0 +1,79 @@
+{% extends "templates/base.html" %}
+
+{% block scripts %}
+{{super()}}
+<script type="text/javascript">
+  $(function() {
+    var clearAlerts = function() {
+      $('#alerts > div > div').remove();
+    };
+
+    $('#generate_configs').click(function() {
+      clearAlerts();
+      $('#generate_configs').prop("disabled", true);
+      $('#generate_configs').css("cursor", 'wait');
+
+      // call Admin GUI service
+      $.post(
+        "{{ url_for('generate_configs') }}",
+        {
+          csrf_token: '{{ csrf_token() }}'
+        }
+      ).done(function(data, status) {
+        clearAlerts();
+        $('#generate_configs').prop("disabled", false);
+        $('#generate_configs').css("cursor", '');
+        var html = '';
+        html += '<div role="alert">';
+        html += '<pre>';
+        html += data;
+        html += '</pre>';
+        html += '</div>';
+        $('#alerts > div').append(html);
+      }).fail(function(jqXHR, status) {
+        $('#generate_configs').prop("disabled", false);
+        $('#generate_configs').css("cursor", '');
+        // show errors
+        var msg = jqXHR.statusText;
+        if (jqXHR.responseJSON) {
+          msg = jqXHR.responseText.replace(/\n/g, "<br/>").replace(/ /g, "&nbsp;");
+        }
+        else if (jqXHR.responseText.indexOf("<p>The CSRF token is invalid.</p>") != -1) {
+          msg = "The CSRF token is invalid. Please reload this page and retry.";
+        }
+        else if (jqXHR.responseText) {
+          msg = '<pre>' + jqXHR.responseText + '</pre>';
+        }
+
+        clearAlerts();
+        var html = '';
+        html += '<div class="alert alert-danger" role="alert">';
+        html +=   '<strong>Error while refreshing config cache:</strong><br/>';
+        html +=   '<div style="font-family: monospace">' + msg + '</div>';
+        html += '</div>';
+        $('#alerts > div').append(html);
+      });
+    });
+  });
+</script>
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block container %}
+
+  <h1>{{ admin_gui_title }}</h1>
+  {{ admin_gui_subtitle }}
+
+  <br><br>
+
+{% if have_config_generator %}
+  <button id="generate_configs" class="btn btn-success">
+    {{ utils.icon('refresh') }} Generate service configuration
+  </button>
+{% endif %}
+
+  <div id="alerts" class="row">
+    <br/>
+    <div class="col-md-12"></div>
+  </div>
+{% endblock %}
