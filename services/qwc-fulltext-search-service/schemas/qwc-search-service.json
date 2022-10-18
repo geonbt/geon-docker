@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/qwc-services/qwc-fulltext-search-service/master/schemas/qwc-search-service.json",
+  "title": "QWC Fulltext Search Service",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "title": "JSON Schema",
+      "description": "Reference to JSON schema of this config",
+      "type": "string",
+      "format": "uri",
+      "default": "https://raw.githubusercontent.com/qwc-services/qwc-fulltext-search-service/master/schemas/qwc-search-service.json"
+    },
+    "service": {
+      "title": "Service name",
+      "type": "string",
+      "const": "search"
+    },
+    "config": {
+      "title": "Config options",
+      "type": "object",
+      "properties": {
+        "solr_service_url": {
+          "description": "SOLR service URL",
+          "type": "string"
+        },
+        "word_split_re": {
+          "description": "Word split Regex",
+          "type": "string",
+          "default": "[\\s,.:;\"]+"
+        },
+        "search_result_limit": {
+          "description": "Result count limit per search",
+          "type": "integer",
+          "default": 50
+        },
+        "db_url": {
+          "description": "Default DB connection for geometry result query",
+          "type": "string"
+        }
+      },
+      "required": [
+        "solr_service_url"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "type": "object",
+      "properties": {
+        "facets": {
+          "title": "Search facets",
+          "type": "array",
+          "items": {
+            "title": "Facet",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Facet name",
+                "type": "string"
+              },
+              "filter_word": {
+                "type": "string"
+              },
+              "table_name": {
+                "description": "Table/View for search result geometries",
+                "type": "string",
+                "default": "search_v"
+              },
+              "geometry_column": {
+                "description": "Geometry column in search result table",
+                "type": "string",
+                "default": "geom"
+              },
+              "facet_column": {
+                "description": "Facet name column in search result table",
+                "type": "string",
+                "default": "subclass"
+              },
+              "db_url": {
+                "description": "DB connection for geometry result query",
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "filter_word"
+            ]
+          }
+        }
+      },
+      "required": [
+        "facets"
+      ]
+    }
+  },
+  "required": [
+    "service",
+    "config",
+    "resources"
+  ]
+}
