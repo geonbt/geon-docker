@@ -1,0 +1,125 @@
+{
+  "$schema": "https://github.com/qwc-services/qwc-services-core/raw/master/schemas/qwc-services-permissions.json",
+  "users": [
+    {
+      "name": "gn_admin",
+      "groups": [],
+      "roles": [
+        "role_web_admin"
+      ]
+    },
+    {
+      "name": "gn_pub",
+      "groups": [],
+      "roles": [
+        "role_web_basic"
+      ]
+    },
+    {
+      "name": "gn_test",
+      "groups": [],
+      "roles": [
+        "role_web_admin"
+      ]
+    }
+  ],
+  "groups": [],
+  "roles": [
+    {
+      "role": "public",
+      "permissions": {
+        "wms_services": [
+          {
+            "name": "project/idarisinir",
+            "layers": [
+              {
+                "name": "idarisinir"
+              },
+              {
+                "name": "district",
+                "attributes": [
+                  "district_id",
+                  "name",
+                  "muni_id",
+                  "observ",
+                  "ud_expl_id",
+                  "ws_expl_id",
+                  "active",
+                  "tapukimlik",
+                  "geometry",
+                  "maptip"
+                ]
+              },
+              {
+                "name": "municipality",
+                "attributes": [
+                  "muni_id",
+                  "name",
+                  "observ",
+                  "active",
+                  "geometry",
+                  "maptip"
+                ]
+              },
+              {
+                "name": "osm_bg"
+              }
+            ]
+          }
+        ],
+        "wfs_services": [],
+        "background_layers": [
+          "mapnik"
+        ],
+        "data_datasets": [],
+        "viewer_tasks": [],
+        "theme_info_links": [],
+        "plugin_data": [],
+        "dataproducts": [
+          "qwc_demo"
+        ],
+        "document_templates": [],
+        "print_templates": [],
+        "solr_facets": [
+          "foreground",
+          "ne_10m_admin_0_countries"
+        ],
+        "external_links": []
+      }
+    },
+    {
+      "role": "role_web_admin",
+      "permissions": {
+        "wms_services": [],
+        "wfs_services": [],
+        "background_layers": [],
+        "data_datasets": [],
+        "viewer_tasks": [],
+        "theme_info_links": [],
+        "plugin_data": [],
+        "dataproducts": [],
+        "document_templates": [],
+        "print_templates": [],
+        "solr_facets": [],
+        "external_links": []
+      }
+    },
+    {
+      "role": "role_web_basic",
+      "permissions": {
+        "wms_services": [],
+        "wfs_services": [],
+        "background_layers": [],
+        "data_datasets": [],
+        "viewer_tasks": [],
+        "theme_info_links": [],
+        "plugin_data": [],
+        "dataproducts": [],
+        "document_templates": [],
+        "print_templates": [],
+        "solr_facets": [],
+        "external_links": []
+      }
+    }
+  ]
+}

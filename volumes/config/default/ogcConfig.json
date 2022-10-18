@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/qwc-services/qwc-ogc-service/raw/master/schemas/qwc-ogc-service.json",
+  "service": "ogc",
+  "config": {
+    "default_qgis_server_url": "http://qwc-qgis-server/ows/"
+  },
+  "resources": {
+    "wms_services": [
+      {
+        "name": "project/idarisinir",
+        "online_resources": {
+          "service": "/ows/project/idarisinir",
+          "feature_info": "/api/v1/featureinfo/project/idarisinir",
+          "legend": "/api/v1/legend/project/idarisinir"
+        },
+        "root_layer": {
+          "name": "idarisinir",
+          "title": "İdari Sınır",
+          "layers": [
+            {
+              "name": "district",
+              "title": "Mahalle",
+              "attributes": [
+                "district_id",
+                "name",
+                "muni_id",
+                "observ",
+                "ud_expl_id",
+                "ws_expl_id",
+                "active",
+                "tapukimlik",
+                "geometry",
+                "maptip"
+              ],
+              "queryable": true
+            },
+            {
+              "name": "municipality",
+              "title": "İlçe",
+              "attributes": [
+                "muni_id",
+                "name",
+                "observ",
+                "active",
+                "geometry",
+                "maptip"
+              ],
+              "queryable": true
+            }
+          ]
+        },
+        "internal_print_layers": [
+          "osm_bg"
+        ]
+      }
+    ],
+    "wfs_services": []
+  }
+}

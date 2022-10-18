@@ -1,0 +1,392 @@
+{
+  "locale": "es-ES",
+  "messages": {
+    "appmenu": {
+      "items": {
+        "ExternalLink": "",
+        "AttributeTable": "",
+        "DxfExport": "Exportar DXF",
+        "Editing": "Editando",
+        "FeatureForm": "",
+        "Help": "Ayuda",
+        "IdentifyRegion": "Identificar zona",
+        "LayerCatalog": "",
+        "LayerTree": "Capas & Leyenda",
+        "Login": "Inicio de sesión",
+        "Logout": "Cierre de sesión",
+        "Measure": "Medida",
+        "MeasureLineString": "Medir una línea",
+        "MeasurePolygon": "Medir un polígono",
+        "Print": "Imprimir",
+        "RasterExport": "Exportar trama",
+        "Redlining": "Línea de demarcación",
+        "Share": "Compartir enlace",
+        "ThemeSwitcher": "Tema",
+        "Tools": "Herramientas de Mapa",
+        "Bookmark": "",
+        "TimeManager": ""
+      },
+      "filter": "",
+      "menulabel": "Mapa & Herramientas"
+    },
+    "search": {
+      "coordinates": "",
+      "nominatim": {
+        "amenity": "",
+        "boundary": "",
+        "building": "",
+        "landuse": "",
+        "leisure": "",
+        "place": "",
+        "highway": "",
+        "natural": "",
+        "railway": "",
+        "tourism": ""
+      },
+      "all": "Todo",
+      "enablelayer": "Habilitar capa",
+      "existinglayer": "La capa ya existe en el mapa",
+      "invisiblelayer": "El resultado se encuentra en una capa no visible",
+      "more": "Más...",
+      "providerselection": "",
+      "search": "Buscar",
+      "searchall": "Buscar lugares o agregar mapas...",
+      "searchinprogress": "",
+      "searchreset": "",
+      "themes": "Temas"
+    },
+    "attribtable": {
+      "addfeature": "",
+      "commit": "",
+      "delete": "",
+      "deletefailed": "",
+      "deletefeatures": "",
+      "deleting": "",
+      "discard": "",
+      "formeditmode": "",
+      "geomnoadd": "",
+      "layer": "",
+      "loadfailed": "",
+      "loading": "",
+      "nodelete": "",
+      "nogeomnoform": "",
+      "pleasereload": "",
+      "reload": "",
+      "selectlayer": "",
+      "title": "",
+      "zoomtoselection": ""
+    },
+    "bgswitcher": {
+      "nobg": "Sin fondo"
+    },
+    "bookmark": {
+      "add": "",
+      "addfailed": "",
+      "description": "",
+      "lastUpdate": "",
+      "manage": "",
+      "notloggedin": "",
+      "open": "",
+      "openTab": "",
+      "remove": "",
+      "removefailed": "",
+      "savefailed": "",
+      "update": ""
+    },
+    "bottombar": {
+      "mousepos_label": "Coordenadas",
+      "scale_label": "Escala",
+      "terms_label": "Términos de uso",
+      "viewertitle_label": ""
+    },
+    "copybtn": {
+      "click_to_copy": "Clic para copiar",
+      "copied": "Copiado"
+    },
+    "dxfexport": {
+      "layers": "",
+      "selectinfo": "Arrastre un rectángulo alrededor de la zona para exportar...",
+      "symbologyscale": "Escala de la simbología:"
+    },
+    "editing": {
+      "add": "",
+      "attrtable": "",
+      "canceldelete": "No borrar",
+      "clearpicture": "",
+      "commit": "Confirmar",
+      "create": "",
+      "delete": "Borrar",
+      "discard": "Descartar",
+      "draw": "Trazar",
+      "feature": "Elemento",
+      "geomreadonly": "",
+      "invalidform": "",
+      "maximize": "Maximizar",
+      "minimize": "Minimizar",
+      "nocompatpick": "",
+      "noeditablelayers": "Sin capas a modificar.",
+      "paint": "",
+      "pick": "Elegir",
+      "pickdrawfeature": "",
+      "reallydelete": "Borrar",
+      "relationcommitfailed": "",
+      "select": "Seleccionar",
+      "selectedpicture": "",
+      "takepicture": "",
+      "unsavedchanged": ""
+    },
+    "featureform": {
+      "feature": "",
+      "noresults": "",
+      "querying": "",
+      "title": ""
+    },
+    "fileselector": {
+      "placeholder": "Seleccionar archivo..."
+    },
+    "heightprofile": {
+      "asl": "a.s.l.",
+      "distance": "Distancia",
+      "export": "",
+      "height": "Altura",
+      "loading": "Cálculo del perfil de altura..."
+    },
+    "identify": {
+      "export": "Exportar",
+      "exportformat": "Exportar formato",
+      "featureReport": "Informe del elemento",
+      "link": "Link",
+      "noattributes": "Sin atributos",
+      "noresults": "Sin información disponible sobre el punto seleccionado",
+      "querying": "Consultando...",
+      "title": "Información del elemento"
+    },
+    "imageeditor": {
+      "confirmclose": "",
+      "title": ""
+    },
+    "importlayer": {
+      "addfailed": "",
+      "addlayer": "Agregar capa",
+      "connect": "Conectar",
+      "filter": "Filtrar...",
+      "loading": "Cargando...",
+      "localfile": "Archivo local",
+      "nofeatures": "No se pudieron importar elementos.",
+      "noresults": "Sin resultados o la dirección URL no es válida",
+      "url": "URL",
+      "urlplaceholder": "Ingrese dirección URL o WMS, WMTS, WFS..."
+    },
+    "infotool": {
+      "clickhelpPoint": "Haga click en una ubicación para identificar en el mapa...",
+      "clickhelpPolygon": "Trace un polígono alrededor de los elementos para identificarlos..."
+    },
+    "layercatalog": {
+      "windowtitle": ""
+    },
+    "layerinfo": {
+      "abstract": "Resumen",
+      "attribution": "Atribución",
+      "dataUrl": "Dirección URL de datos",
+      "keywords": "Palabras claves",
+      "legend": "Leyenda",
+      "maxscale": "Escala máxima de visualización",
+      "metadataUrl": "Dirección URL de metadatos",
+      "minscale": "Escala mínima de visualización",
+      "title": "Información de la capa"
+    },
+    "layertree": {
+      "compare": "Comparar con la capa superior",
+      "deletealllayers": "Remover todas las capas",
+      "importlayer": "Importar capa",
+      "maptip": "Mostrar sugerencias de capas en el mapa",
+      "printlegend": "Imprimir leyenda",
+      "separator": "Separador",
+      "separatortooltip": "Agregar separador",
+      "transparency": "Transparencia",
+      "visiblefilter": "Filtrar capas no visibles",
+      "zoomtolayer": "Zoom a la capa"
+    },
+    "linkfeatureform": {
+      "cancel": "",
+      "close": "",
+      "drawhint": "",
+      "pickhint": ""
+    },
+    "locate": {
+      "feetUnit": "pies",
+      "metersUnit": "metros",
+      "popup": "Está dentro de {distance} {unit} desde este punto",
+      "statustooltip": {
+        "DISABLED": "Posición: deshabilitado",
+        "ENABLED": "Posición: habilitado",
+        "FOLLOWING": "Posición: siguiendo",
+        "LOCATING": "Posición: ubicando...",
+        "PERMISSION_DENIED": "Posición: permiso denegado"
+      }
+    },
+    "map": {
+      "loading": "Cargando...",
+      "resetrotation": ""
+    },
+    "mapinfotooltip": {
+      "elevation": "Elevación",
+      "title": "Posición"
+    },
+    "measureComponent": {
+      "areaLabel": "Area",
+      "bearingLabel": "Dirección",
+      "lengthLabel": "Longitud",
+      "pointLabel": "Posición"
+    },
+    "navbar": {
+      "perpage": ""
+    },
+    "print": {
+      "grid": "Grilla:",
+      "layout": "Diseño:",
+      "legend": "",
+      "maximize": "Maximizar",
+      "minimize": "Minimizar",
+      "nolayouts": "El tema seleccionado no admite su impresión",
+      "notheme": "No hay tema seleccionado",
+      "output": "Salida de impresión",
+      "resolution": "Resolución:",
+      "rotation": "Rotación:",
+      "scale": "Escala:",
+      "submit": "Imprimir",
+      "wait": "Por favor espere..."
+    },
+    "qtdesignerform": {
+      "loading": ""
+    },
+    "rasterexport": {
+      "format": "Formato:",
+      "resolution": "Resolución:",
+      "selectinfo": "Arrastre un rectángulo alrededor de la región para su exportación..."
+    },
+    "redlining": {
+      "border": "Límite",
+      "buffer": "Bufer",
+      "buffercompute": "Computar",
+      "bufferdistance": "Distancia",
+      "bufferlayer": "Destino",
+      "bufferlayername": "Bufer",
+      "bufferselectfeature": "Seleccione un elemento para almacenar en bufer",
+      "circle": "Círculo",
+      "delete": "Eliminar",
+      "draw": "Dibujar",
+      "edit": "Editar",
+      "fill": "Relleno",
+      "freehand": "Dibujo a mano alzada",
+      "label": "Etiqueta",
+      "layer": "Capa",
+      "line": "Línea",
+      "outline": "Contorno",
+      "pick": "Elegir",
+      "point": "Punto",
+      "polygon": "Polígono",
+      "size": "Tamaño",
+      "text": "Texto",
+      "width": "Ancho"
+    },
+    "scratchdrawing": {
+      "finish": "Finalizar"
+    },
+    "searchbox": {
+      "filter": "Refinar búsqueda",
+      "layers": "Mapas",
+      "more": "más resultados",
+      "morelayers": "Más resultados disponibles",
+      "nodescription": "No hay descripción disponible",
+      "placeholder": "Busque un lugar o agregue mapa",
+      "places": "Lugares",
+      "recent": "Búsquedas recientes"
+    },
+    "serviceinfo": {
+      "abstract": "Resumen",
+      "contactEmail": "Correo electrónico",
+      "contactOrganization": "Organización",
+      "contactPerson": "Persona de contacto",
+      "contactPhone": "Teléfono",
+      "contactPosition": "Posicion",
+      "keywords": "Palabras clave",
+      "onlineResource": "Recurso en línea",
+      "title": "Información del tema"
+    },
+    "share": {
+      "QRCodeLinkTitle": "Código QR",
+      "directLinkTitle": "Vía un vínculo directo",
+      "refresh": "Generar un enlace permanente",
+      "showpin": "Mostrar pin",
+      "socialIntro": "En tu red social favorita"
+    },
+    "snapping": {
+      "loading": "",
+      "snappingenabled": ""
+    },
+    "themelayerslist": {
+      "addlayer": "Agregar capa",
+      "addlayerstotheme": "Agregar capas al mapa actual",
+      "addselectedlayers": "Agregar capa(s) seleccionada(s)"
+    },
+    "themeswitcher": {
+      "addlayerstotheme": "Agregar capas al mapa actual",
+      "addtotheme": "Agregar al actual tema",
+      "confirmswitch": "",
+      "filter": "Filtrar...",
+      "match": {
+        "abstract": "Resumen",
+        "keywords": "Palabras clave",
+        "title": "Título"
+      },
+      "openintab": "Abrir en pestaña",
+      "restrictedthemeinfo": "Ud. no tiene permitido ver el tema o no está conectado"
+    },
+    "timemanager": {
+      "animationinterval": "",
+      "markers": "",
+      "notemporaldata": "",
+      "play": "",
+      "playrev": "",
+      "rewind": "",
+      "stepback": "",
+      "stepfwd": "",
+      "stepsize": "",
+      "stop": "",
+      "title": "",
+      "toggle": "",
+      "unit": {
+        "century": "",
+        "days": "",
+        "decade": "",
+        "hours": "",
+        "milliseconds": "",
+        "minutes": "",
+        "months": "",
+        "seconds": "",
+        "years": ""
+      }
+    },
+    "tooltip": {
+      "background": "Cambiar fondo",
+      "fullscreendisable": "",
+      "fullscreenenable": "",
+      "home": "Mostrar todo el mapa",
+      "zoomin": "Acercarse",
+      "zoomout": "Alejarse"
+    },
+    "vectorlayerpicker": {
+      "prompt": "Ingrese nombre de la capa"
+    },
+    "window": {
+      "close": "Cerrar",
+      "dock": "Acoplar",
+      "maximize": "",
+      "minimize": "",
+      "undock": "Desacoplar",
+      "unmaximize": "",
+      "unminimize": ""
+    }
+  }
+}

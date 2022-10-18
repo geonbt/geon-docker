@@ -1,0 +1,169 @@
+{
+  "$schema": "https://github.com/qwc-services/qwc-feature-info-service/raw/master/schemas/qwc-feature-info-service.json",
+  "service": "feature-info",
+  "config": {
+    "default_qgis_server_url": "http://qwc-qgis-server/ows/"
+  },
+  "resources": {
+    "wms_services": [
+      {
+        "name": "project/idarisinir",
+        "root_layer": {
+          "name": "idarisinir",
+          "title": "İdari Sınır",
+          "layers": [
+            {
+              "name": "district",
+              "title": "Mahalle",
+              "attributes": [
+                {
+                  "name": "district_id"
+                },
+                {
+                  "name": "name"
+                },
+                {
+                  "name": "muni_id"
+                },
+                {
+                  "name": "observ"
+                },
+                {
+                  "name": "ud_expl_id"
+                },
+                {
+                  "name": "ws_expl_id"
+                },
+                {
+                  "name": "active"
+                },
+                {
+                  "name": "tapukimlik"
+                },
+                {
+                  "name": "geometry"
+                },
+                {
+                  "name": "maptip"
+                }
+              ],
+              "display_field": "name"
+            },
+            {
+              "name": "municipality",
+              "title": "İlçe",
+              "attributes": [
+                {
+                  "name": "muni_id"
+                },
+                {
+                  "name": "name"
+                },
+                {
+                  "name": "observ"
+                },
+                {
+                  "name": "active"
+                },
+                {
+                  "name": "geometry"
+                },
+                {
+                  "name": "maptip"
+                }
+              ],
+              "display_field": "name"
+            }
+          ]
+        }
+      },
+      {
+        "name": "qwc_demo",
+        "root_layer": {
+          "name": "qwc_demo",
+          "title": "QWC Services Demo WMS",
+          "layers": [
+            {
+              "name": "edit_demo",
+              "title": "Edit Demo",
+              "layers": [
+                {
+                  "name": "edit_points",
+                  "title": "Edit Points",
+                  "attributes": [
+                    {
+                      "name": "id"
+                    },
+                    {
+                      "name": "name"
+                    },
+                    {
+                      "name": "description"
+                    },
+                    {
+                      "name": "num"
+                    },
+                    {
+                      "name": "value"
+                    },
+                    {
+                      "name": "type"
+                    },
+                    {
+                      "name": "amount"
+                    },
+                    {
+                      "name": "validated",
+                      "format": "{\"t\": \"Yes\", \"f\": \"No\"}"
+                    },
+                    {
+                      "name": "datetime"
+                    },
+                    {
+                      "name": "geometry"
+                    },
+                    {
+                      "name": "maptip"
+                    }
+                  ],
+                  "display_field": "name"
+                }
+              ]
+            },
+            {
+              "name": "countries",
+              "title": "Countries",
+              "attributes": [
+                {
+                  "name": "name",
+                  "alias": "Name"
+                },
+                {
+                  "name": "formal_en",
+                  "alias": "Formal name"
+                },
+                {
+                  "name": "pop_est",
+                  "alias": "Population"
+                },
+                {
+                  "name": "subregion",
+                  "alias": "Subregion"
+                },
+                {
+                  "name": "geometry"
+                }
+              ],
+              "display_field": "name",
+              "info_template": {
+                "type": "wms",
+                "wms_url": "http://qwc-qgis-server/ows/qwc_demo",
+                "template": "<div><h2>Demo Template</h2>Pos: {{ x }}, {{ y }}<br>Name: {{ feature.Name }}</div>"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
