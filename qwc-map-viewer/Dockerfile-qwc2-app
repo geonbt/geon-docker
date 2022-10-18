@@ -1,0 +1,12 @@
+FROM sourcepole/qwc-map-viewer-base:latest
+
+ARG QWC2_URL
+# Optional token for download with authorization
+ARG AUTH_TOKEN
+
+RUN wget -O /tmp/appbundle.zip --header="PRIVATE-TOKEN: $AUTH_TOKEN" "$QWC2_URL" && \
+    cd /tmp && \
+    unzip appbundle.zip && \
+    cd prod && \
+    mkdir /qwc2 && mv * /qwc2 && \
+    rm -rf appbundle.zip
